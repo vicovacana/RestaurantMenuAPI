@@ -1,4 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using RestaurantMenuAPI.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<MenuDbContext>(options =>
+    options.UseNpgsql(builder.Configuration.GetConnectionString("PostgresConnection")));
 
 // Add services to the container.
 
