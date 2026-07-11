@@ -1,6 +1,33 @@
-@RestaurantMenuAPI_HostAddress = http://localhost:5026
+POST https://localhost:7215/api/Categories
+Content-Type: application/json
 
-GET {{RestaurantMenuAPI_HostAddress}}/weatherforecast/
-Accept: application/json
+{
+  "name": "Glavna jela"
+}
+
 
 ###
+POST https://localhost:7215/api/MenuItems
+Content-Type: application/json
+
+{
+  "name": "Karbonara",
+  "description": "Pasta sa pecenicom i sirom",
+  "price": 950.00,
+  "categoryId": 1
+}
+
+### 
+PUT https://localhost:7215/api/MenuItems/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Kaprićoza - Porodična",
+  "description": "Pica sa šunkom, sirom i pečurkama",
+  "price": 1200.00,
+  "categoryId": 1
+}
+
+### 
+DELETE https://localhost:7215/api/MenuItems/1
