@@ -71,5 +71,7 @@ namespace RestaurantMenuAPI.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
+
+//
     }
 }
