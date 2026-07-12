@@ -2,9 +2,9 @@ name: .NET Core CI/CD
 
 on:
   push:
-    branches: [ "dev", "master", "main" ]
+    branches: [ "develop", "master"]
   pull_request:
-    branches: [ "dev", "master", "main" ]
+    branches: [ "master" ]
 
 jobs:
   build-and-test:
