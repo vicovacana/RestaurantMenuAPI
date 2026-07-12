@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantMenuAPI.Models;
+using Microsoft.AspNetCore.Authorization;
+
 
 namespace RestaurantMenuAPI.Controllers
 {
@@ -22,6 +24,7 @@ namespace RestaurantMenuAPI.Controllers
             return Ok(menuItems);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddMenuItem(MenuItem menuItem)
         {
@@ -31,6 +34,7 @@ namespace RestaurantMenuAPI.Controllers
             return Ok(menuItem);
         }
 
+        [Authorize]
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateMenuItem(int id, MenuItem updatedItem)
         {
@@ -55,6 +59,7 @@ namespace RestaurantMenuAPI.Controllers
             return NoContent();
         }
 
+        [Authorize]
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteMenuItem(int id)
         {

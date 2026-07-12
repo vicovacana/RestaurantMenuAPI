@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using RestaurantMenuAPI.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace RestaurantMenuAPI.Controllers
 {
@@ -24,6 +25,7 @@ namespace RestaurantMenuAPI.Controllers
             return Ok(categories);
         }
 
+        [Authorize]
         [HttpPost]
         public async Task<IActionResult> AddCategory(Category category)
         {
