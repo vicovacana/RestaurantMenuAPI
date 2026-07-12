@@ -1,4 +1,6 @@
 <Solution>
-  <Project Path="RestaurantMenuAPI.Tests/RestaurantMenuAPI.Tests.csproj" Id="18f30d60-4062-4509-9daf-d74f6e09cc94" />
+  <Project Path="RestaurantMenuAPI.Tests/RestaurantMenuAPI.Tests.csproj" Id="18f30d60-4062-4509-9daf-d74f6e09cc94">
+    <Build Solution="Debug|*" Project="false" />
+  </Project>
   <Project Path="RestaurantMenuAPI/RestaurantMenuAPI.csproj" />
 </Solution>
