@@ -37,6 +37,7 @@ jobs:
     - name: Build and push Docker image
       uses: docker/build-push-action@v5
       with:
-        context: .
+        context: ./RestaurantMenuAPI
+	file: ./RestaurantMenuAPI/Dockerfile
         push: true
         tags: vicovacana/restaurant-api:latest
